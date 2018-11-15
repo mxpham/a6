@@ -1,0 +1,54 @@
+<!--
+Date: November 15, 2018
+SID: 01617504
+91.61 GUI Programming I Assignment: Creating an Interactive Dynamic Table
+Mai Pham, UMass Lowell Computer Science, Mai_Pham@student.uml.edu
+Copyright (c) 2018 by Mai Pham. All rights reserved.
+-->
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="css/style.css" />
+<head>
+    <title>FORM</title>
+    <script src="js/calculation.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1> Dynamic Multiplication Table </h1>
+    <div class="row">
+      <div class="col-6">
+        <!-- creates form to ask for horizontal & vertical bounding numbers -->
+          <form>
+                <label>Enter horizontal axis bounding numbers. Order does not matter.</label><br>
+                <input type="text" id='h1'><p><span id='h1_err'></p>
+                <br><br>
+                <input type="text" id='h2'><p><span id='h2_err'></p>
+                <br><br>
+                Enter vertical axis bounding numbers. Order does not matter.<br>
+                <input type="text" id='v1'><p><span id='v1_err'></p>
+                <br><br>
+                <input type="text" id='v2'><p><span id='v2_err'></p>
+                <br><br>
+          </form>
+          <!-- calls js function when button is clicked to produce table-->
+          <input id="proceed" type="button" onclick="generate_table('h1', 'h2', 'v1', 'v2')"
+            value="Proceed">
+      </div>
+      <div class="col-6">
+          <table id='myTable'></table>
+      </div>
+    </div>
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</body>
+</html>
